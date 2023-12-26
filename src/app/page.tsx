@@ -9,7 +9,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center bg-gray-200 justify-between p-40">
         {/* className="mx-auto max-w-screen-lg" */}
         <div>
-          <button className="fixed top-4 right-4 bg-white text-blue px-8 py-2 rounded-full cursor-pointer new ">
+          <button className="fixed top-4 right-4 bg-white text-blue px-8 py-2 rounded-full cursor-pointer new border-solid border-2 border-green-600 ">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
                 className="w-[16px] h-[16px] text-gray-800 dark:text-blue new"
