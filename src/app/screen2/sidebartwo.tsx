@@ -1,8 +1,11 @@
 // components/Sidebar.js
-import React from 'react';
+import React,{useState} from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const Sidebar = () => {
+   const [selectedItem, setSelectedItem] = useState<string | null>(null);
       const sidebarStyle = {
     backgroundColor: '#2c3e50',
     color: 'white', // Adjust text color based on your needs
@@ -23,24 +26,48 @@ const Sidebar = () => {
         <div>
        
                 <h1 className='mt-6 bg-light mb-5 text-gray-300' >TODAY</h1>
-                <div className='flex bg-gray-500 pt-2 pb-2 pr-8 rounded-full'>
+                <div className='flex  pt-2 pb-2 pr-8 rounded-full'>
                 <svg className="w-10 h-6 text-gray-900 dark:text-blue ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
                 </svg>
                 <h1 className="text-gray-300 ml-3">About Product Thinking</h1>
                 </div>
+                <ul>
                 <div className='flex  pt-3 pb-3 mt-5 rounded-t-none'>
+                <li>
+                <Link legacyBehavior href="/promotediscount">
+                <a
+                    className={`flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-black dark:hover:bg-gray-700 group ${selectedItem === 'HowItWorks' ? 'bg-gray-700' : ''}`}
+                  > 
+                  <div> 
                 <svg className="w-10 h-6 text-gray-1000 dark:text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
                 </svg>
-                <h1 className='ml-3'>Promote Discount in</h1>
                 </div>
+                <span className="flex-1 ms-3 blackspace-nowrap">Promote Discount in</span>
+                </a>
+                </Link>
+              </li>
+              </div>
+                </ul>
+                <ul>
                 <div className='flex  pt-3 pb-3 mt-5 rounded-t-none'>
+                <li>
+                <Link legacyBehavior href="/uxwriting">
+                <a
+                    className={`flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-black dark:hover:bg-gray-700 group ${selectedItem === 'UX Writing Movie App' ? 'bg-gray-700' : ''}`}
+                  > 
+                  <div>
                 <svg className="w-10 h-6 text-gray-1000 dark:text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
                 </svg>
-                <h1 className='ml-3'>UX Writing Movie App</h1>
                 </div>
+                <span className='flex-1 ms-3 blackspace-nowrap'>UX Writing Movie App</span>
+                </a>
+                </Link>
+              </li>
+                </div>
+                </ul>
                 <h1 className='mt-6 bg-light mb-5 text-gray-300' >1 Month Ago</h1>
                 <div className='flex  pt-3 pb-3 mt-5 rounded-t-none '>
                 <svg className="w-10 h-6 text-gray-1000 dark:text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">

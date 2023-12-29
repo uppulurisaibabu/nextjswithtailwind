@@ -73,3 +73,10 @@ body {
 .space1{
   color:#6366f1;
 }
+.send{
+  display: flex; 
+ 
+  /* padding-left:100px; */
+  margin-left: 1530px;
+  
+}

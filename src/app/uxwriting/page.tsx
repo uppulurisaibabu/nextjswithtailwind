@@ -1,13 +1,13 @@
-// components/StaticChatScreen.tsx
-"use client"
-import React from 'react';
-import Sidebar from './sidebartwo';
 
-const StaticChatScreen = () => {
-  
+"use client"
+import React from 'react'
+import Sidebar from '../screen2/sidebartwo'
+
+const page = () => {
   return (
-    <main>
+    <div>
       <Sidebar />
+      
       <div>
           <button className="fixed top-4 right-3 mr-9 bg-white text-blue px-8 py-2 rounded-full cursor-pointer new border-solid border-2 border-green-600 ">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
@@ -38,7 +38,7 @@ const StaticChatScreen = () => {
                 />
                 <div>
                   <p className="font-bold text-lg">
-                    Explain what product thinking is
+                    Explain what UX Writing Movie App?
                   </p>
                   <button className="flex items-center mb-3 bg-white rounded-full p-2 mt-2">
                     {/* Edit Command Icon (Pencil Symbol with Text) */}
@@ -60,15 +60,10 @@ const StaticChatScreen = () => {
             {/* Answer Container with Pure White Background */}
             <div className="bg-white rounded-md p-5 mb-3 ">
               {/* Your provided answer for the first question */}
-              Product thinking is an approach or mindset that focuses on creating and delivering
-              products that truly solve customer problems and meet their needs. It involves
-              understanding the target audience, their pain points, and the goals they want to
-              achieve. Product thinking goes beyond just building features or functionalities; it
-              involves considering the entire user journey and experience.
+              UX writing is crucial for guiding users through the application, providing clear instructions, and ensuring a positive user experience. Below are some examples of UX writing for different parts of a movie app:
               <br />
             <div className='pl-4'>
-              1. User needs: What are the specific problems or challenges that users face? How can
-              the product address those needs effectively?
+              1. To personalize your experience, we'd like to access your location. Allow [App Name] to find cinemas near you?"
               <br />
               2. Value Proposition: What unique value does the product offer to users? How does it
               differentiate itself from existing solutions?
@@ -79,7 +74,10 @@ const StaticChatScreen = () => {
               4. Iterative Development: How can the product be continually improved and refined
               based on user feedback and market insights?
               <br />
-             </div>
+              5. Business Viability: How can the product generate value for the business? What are
+              the revenue streams and growth opportunities?
+            </div>
+              
               {/* Like, Dislike, and Copy Icons with Thumbs Up, Thumbs Down, and Copy Icons */}
               <div className="flex items-center space-x-4 mt-4    ">
                 <button>
@@ -135,7 +133,7 @@ const StaticChatScreen = () => {
           </div>
 
           {/* Question 2 */}
-          <div className="mb-4">
+          <div className="mb-8">
             {/* User Profile, Question, and Edit Button Container */}
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
@@ -147,7 +145,7 @@ const StaticChatScreen = () => {
                 />
                 <div>
                   <p className="font-bold text-lg">
-                    What is MVP in a product context?
+                  Explain what UX Writing Movie App?
                   </p>
                   <button className="flex items-center mb-3 bg-white rounded-full p-2 mt-2">
                     {/* Edit Command Icon (Pencil Symbol with Text) */}
@@ -174,7 +172,7 @@ const StaticChatScreen = () => {
       
 
       {/* Search Bar */}
-      <div className="flex items-center  bg-white-400 justify-center  mb-2">
+      <div className="flex items-center  bg-white-400 justify-center mb-9  ">
         <input
           type="text"
           placeholder="Tell me what do you want"
@@ -210,8 +208,8 @@ const StaticChatScreen = () => {
           </svg>
         </button>
       </div>
-    </main>
-  );
-};
+    </div>
+  )
+}
 
-export default StaticChatScreen;
+export default page
